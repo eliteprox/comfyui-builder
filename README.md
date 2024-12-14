@@ -11,5 +11,6 @@ python server/app.py --workspace ../ComfyUI --media-ports=5678 --host=0.0.0.0
 ```
 
 ## Run ComfyUI
-```cd /ComfyUI && python /ComfyUI/main.py --listen
+```
+cd /ComfyUI && python /ComfyUI/main.py --listen
 ``` 
