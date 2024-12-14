@@ -39,14 +39,23 @@ RUN cd ComfyUI-SAM2-Realtime && \
 RUN cd ComfyUI_RyanOnTheInside && \
     pip install -r requirements.txt && cd ..
 
+RUN /bin/bash -c "source ~/.bashrc"
+
 WORKDIR /comfystream
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN chmod +x Miniconda3-latest-Linux-x86_64.sh
 RUN ./Miniconda3-latest-Linux-x86_64.sh -b
 
 RUN eval "$(/root/miniconda3/bin/conda shell.bash hook)"
-RUN CONDA_PATH=/root/miniconda3
 ENV PATH="/root/miniconda3/bin:${PATH}"
-RUN conda create -n comfystream python=3.11 -y
 RUN conda init bash
+RUN conda create -n comfystream python=3.11 -y
+# Activate the Conda environment and install dependencies 
+RUN /bin/bash -c "source activate comfystream && pip install twilio aiortc torchaudio scikit-image && pip install ."
 RUN conda install pytorch torchvision torchaudio -c pytorch -y
+
+
+RUN cp -r /comfystream/nodes/tensor_utils /ComfyUI/custom_nodes
+RUN /root/miniconda3/envs/comfystream/bin/python install.py --workspace /ComfyUI
+
+RUN conda config --set auto_activate_base false
