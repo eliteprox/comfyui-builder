@@ -1,6 +1,7 @@
 ## Build development container
-`cd .devcontainer && docker build -f Dockerfile.base -t comfyui-builder:base-latest .`
-
+```
+cd .devcontainer && docker build -f Dockerfile.base -t comfyui-builder:base-latest .
+ ```
 Re-load the folder as a devcontainer in vscode
 
 ## Run ComfyStream
@@ -10,4 +11,4 @@ python server/app.py --workspace ../ComfyUI --media-ports=5678 --host=0.0.0.0
 ```
 
 ## Run ComfyUI
-`cd /ComfyUI && python /ComfyUI/main.py --listen`
+```cd /ComfyUI && python /ComfyUI/main.py --listen``` 
