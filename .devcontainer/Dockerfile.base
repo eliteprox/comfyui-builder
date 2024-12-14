@@ -39,15 +39,6 @@ RUN cd ComfyUI-SAM2-Realtime && \
 RUN cd ComfyUI_RyanOnTheInside && \
     pip install -r requirements.txt && cd ..
 
-# RUN cd ComfyUI_RyanOnTheInside && \ 
-#     pip install -r requirements.txt && cd..
-
-# RUN cd ComfyUI-Depth-Anything-Tensorrt && \
-#     pip install -r requirements.txt && cd ..
-
-# RUN cd ComfyUI-StreamDiffusion && \
-#     pip install -r requirements.txt && cd ..
-
 WORKDIR /comfystream
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN chmod +x Miniconda3-latest-Linux-x86_64.sh
