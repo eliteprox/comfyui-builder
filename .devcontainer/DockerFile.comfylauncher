@@ -1,0 +1,9 @@
+# Use the ComfyUI launcher image as the base image
+FROM comfyui-launcher:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy additional files or applications into the container
+COPY . /app
+

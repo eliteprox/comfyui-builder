@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug ComfyStream",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "/comfystream",
+            "program": "server/app.py",
+            "args": [
+                "--workspace", "../ComfyUI",
+                "--media-ports=5678",
+                "--host=0.0.0.0",
+            ],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}
+
+//python server/app.py --workspace ../ComfyUI --media-ports=5678 --host=0.0.0.0
+//python /ComfyUI/main.py --listen
