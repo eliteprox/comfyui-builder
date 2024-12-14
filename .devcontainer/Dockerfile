@@ -10,7 +10,7 @@ WORKDIR /comfystream
 RUN eval "$(/root/miniconda3/bin/conda shell.bash hook)"
 RUN conda init bash
 RUN which python
-RUN /root/miniconda3/envs/comfystream/bin/pip install twilio aiortc
+RUN /root/miniconda3/envs/comfystream/bin/pip install twilio aiortc torchaudio scikit-image
 RUN /root/miniconda3/envs/comfystream/bin/pip install .
 RUN cp -r /comfystream/nodes/tensor_utils /ComfyUI/custom_nodes
 
