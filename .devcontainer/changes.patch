@@ -1,0 +1,10 @@
+--- export_trt.py	2024-12-16 19:14:24.585890671 +0000
++++ export_trt-modified.py	2024-12-16 19:14:11.004726144 +0000
+@@ -18,4 +18,4 @@
+ 
+     return ret
+ 
+-export_trt(trt_path="./depth_anything_vitl14-fp16.engine", onnx_path="./depth_anything_vitl14.onnx", use_fp16=True)
+\ No newline at end of file
++export_trt(trt_path="./depth_anything_v2_vitb-fp16.engine", onnx_path="./depth_anything_v2_vitb.onnx", use_fp16=True)
+\ No newline at end of file

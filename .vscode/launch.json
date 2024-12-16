@@ -23,5 +23,5 @@
     ]
 }
 
-//python server/app.py --workspace ../ComfyUI --media-ports=5678 --host=0.0.0.0
-//python /ComfyUI/main.py --listen
+// cd /comfystream && conda activate comfystream
+// python server/app.py --workspace ../ComfyUI --media-ports=5678 --host=0.0.0.0
