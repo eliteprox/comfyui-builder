@@ -17,8 +17,11 @@
             ],
             "justMyCode": false,
             "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            }
+                "PYTHONPATH": "/root/miniconda3/envs/comfystream/bin/",
+                "CONDA_DEFAULT_ENV": "comfystream",
+                "PATH": "/root/miniconda3/envs/comfystream/bin:${env:PATH}"
+            },
+            "python": "/root/miniconda3/envs/comfystream/bin/python"
         }
     ]
 }
