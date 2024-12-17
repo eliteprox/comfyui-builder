@@ -6,7 +6,9 @@ cd .devcontainer && docker build -f Dockerfile.base -t comfyui-builder:base-late
 Re-load `comfyui-builder` folder as a devcontainer in vscode
 
 ### Install Nodes
-From the devcontainer:
+From the devcontainer, run `which python` to make sure that you are not in a conda environment. 
+
+If conda is activated then run `conda deactivate`
 ```
 ./install-nodes.sh
 ```
